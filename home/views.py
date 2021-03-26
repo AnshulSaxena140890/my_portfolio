@@ -9,4 +9,5 @@ from django.http import HttpResponse
 class HomeView(View):
     def get(self, request, *args, **kwargs):
         # return home_handlers.current_affairs_renderer(request)
-        return HttpResponse("Hello from My Portfolio!")
+        # return HttpResponse("Hello from My Portfolio!")
+        return render(request, "home.html")
