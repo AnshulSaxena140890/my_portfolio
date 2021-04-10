@@ -10,10 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-from pathlib import Path
+from unipath import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).ancestor(3) #Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +25,7 @@ SECRET_KEY = '334_x-+4e(i6sjqatc=+27e8ih3h5$2u5b#ac25z8ga&7r_hp*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-13-127-198-62.ap-south-1.compute.amazonaws.com']
+ALLOWED_HOSTS = ['ec2-13-127-198-62.ap-south-1.compute.amazonaws.com', '*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home'
 ]
 
 MIDDLEWARE = [
@@ -124,11 +125,12 @@ USE_TZ = True
 # STATICFILES_DIRS is the directory whose contents will be copied
 # while running collectstatic to the STATIC ROOT directory
 STATICFILES_DIRS = (
-    BASE_DIR/'assets',
+    (BASE_DIR.child('assets')),
+    #BASE_DIR/'assets',
 )
 
 
-STATIC_ROOT = BASE_DIR/'static'
+STATIC_ROOT = BASE_DIR.child('static') #BASE_DIR/'static'
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = 'media'

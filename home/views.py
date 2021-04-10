@@ -10,4 +10,4 @@ class HomeView(View):
     def get(self, request, *args, **kwargs):
         # return home_handlers.current_affairs_renderer(request)
         # return HttpResponse("Hello from My Portfolio!")
-        return render(request, "home.html")
+        return render(request, "home/home.html")
