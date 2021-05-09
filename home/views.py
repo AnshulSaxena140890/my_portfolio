@@ -6,8 +6,14 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-class HomeView(View):
+class HomeViewTest(View):
     def get(self, request, *args, **kwargs):
         # return home_handlers.current_affairs_renderer(request)
         # return HttpResponse("Hello from My Portfolio!")
         return render(request, "home/home.html")
+
+class HomeView(View):
+    def get(self, request, *args, **kwargs):
+        # return home_handlers.current_affairs_renderer(request)
+        # return HttpResponse("Hello from My Portfolio!")
+        return render(request, "home/portfolio_matter.html")
