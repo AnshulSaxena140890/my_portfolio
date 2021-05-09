@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from unipath import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).ancestor(3) #Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).ancestor(2) #Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
