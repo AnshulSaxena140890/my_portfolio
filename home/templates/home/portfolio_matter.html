@@ -3,6 +3,7 @@
 {% block content %}
 
 {% load static%}
+
 <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
@@ -227,8 +228,6 @@ Rabbitmq, Scrapy & SQL(PostgreSQL & MySQL). </p>
 
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
 
-            <h3>Fitness</h3>
-
             <div class="progress">
               <span class="skill">Weight Gaining <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
@@ -310,9 +309,9 @@ Fluency in English and Hindi. Learning German.</p>
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Sumary</h3>
+            <h3 class="resume-title">Summary</h3>
             <div class="resume-item pb-0">
-              <h4>Anshul Saxena</h4>
+              <h3>Anshul Saxena</h3>
               <p><em>Innovative and deadline-driven Backend Developer with 3+ years of experience developing Python - Django driven applications.</em></p>
               <ul>
                 <li>New Delhi, India</li>
@@ -356,6 +355,7 @@ Fluency in English and Hindi. Learning German.</p>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
+              <h3>Tradeindia.com</h3>
               <h4>Application Developer (Python/Django)</h4>
               <h5>10/2019 - Present</h5>
               <p><em>Delhi, India </em></p>
@@ -365,6 +365,7 @@ Fluency in English and Hindi. Learning German.</p>
               </ul>
             </div>
             <div class="resume-item">
+              <h3>Kickhead Softwares Pvt. Ltd.</h3>
               <h4>Python/ Django Developer</h4>
               <h5>11/2018 - 10/2019</h5>
               <p><em>Noida, UP</em></p>
@@ -644,7 +645,7 @@ Fluency in English and Hindi. Learning German.</p>
 
         <div class="row" data-aos="fade-in">
 
-          <div class="col-lg-12 d-flex align-items-stretch">
+          <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
                 <i class="icofont-google-map"></i>
@@ -663,43 +664,44 @@ Fluency in English and Hindi. Learning German.</p>
                 <h4>Call:</h4>
                 <p>+918447223371</p>
               </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14007.176940606763!2d77.2608377889057!3d28.63592845175444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfcac7381f671%3A0x531f06064145554a!2sLaxmi%20Nagar%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1620570920653!5m2!1sen!2sin" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223993.6080623032!2d76.95126632592942!3d28.692634061048867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d047309fff32f%3A0xfc5606ed1b5d46c3!2sDelhi!5e0!3m2!1sen!2sin!4v1621168767654!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
           </div>
 
-<!--          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">-->
-<!--            <form action="forms/contact.php" method="post" role="form" class="php-email-form">-->
-<!--              <div class="form-row">-->
-<!--                <div class="form-group col-md-6">-->
-<!--                  <label for="name">Your Name</label>-->
-<!--                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />-->
-<!--                  <div class="validate"></div>-->
-<!--                </div>-->
-<!--                <div class="form-group col-md-6">-->
-<!--                  <label for="name">Your Email</label>-->
-<!--                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />-->
-<!--                  <div class="validate"></div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="form-group">-->
-<!--                <label for="name">Subject</label>-->
-<!--                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />-->
-<!--                <div class="validate"></div>-->
-<!--              </div>-->
-<!--              <div class="form-group">-->
-<!--                <label for="name">Message</label>-->
-<!--                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>-->
-<!--                <div class="validate"></div>-->
-<!--              </div>-->
-<!--              <div class="mb-3">-->
-<!--                <div class="loading">Loading</div>-->
-<!--                <div class="error-message"></div>-->
-<!--                <div class="sent-message">Your message has been sent. Thank you!</div>-->
-<!--              </div>-->
-<!--              <div class="text-center"><button type="submit">Send Message</button></div>-->
-<!--            </form>-->
-<!--          </div>-->
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form  class="php-email-form" id="csrf_form" action="">
+              {% csrf_token %}
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email"  />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject"  />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="10" ></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="alert alert-danger" role="alert" id="error_message"></div>
+                <div class="alert alert-info" role="alert" id="sent-message"></div>
+              </div>
+              <div class="text-center"><button id="contactBtn" type="submit">Send Message</button></div>
+            </form>
+          </div>
 
         </div>
 
@@ -707,4 +709,7 @@ Fluency in English and Hindi. Learning German.</p>
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
+
+
+
 {% endblock %}
