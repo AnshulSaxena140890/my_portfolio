@@ -54,7 +54,7 @@ def create_edit_delete_contact_handler(request, operation, contact_id=None):
                 contact_obj.save()
 
                 return core_lib.return_multi_key_json_response(['success'],
-                                                   ['Your contact details have been successfully saved. Thank You!'])
+                                                   ['Your message with the contact details have been successfully sent. Thank You!'])
         else:
             return core_lib.return_multi_key_json_response(['errors'], [form.errors])
 

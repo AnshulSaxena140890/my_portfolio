@@ -17,13 +17,13 @@ class ContactForm(forms.Form):
     })
 
     message = forms.CharField(max_length=500, min_length=10, error_messages={
-        'required': 'Please provide a subject.',
+        'required': 'Please provide a message.',
         'max_length': 'Message should not exceed 500 characters.',
         'min_length': 'Message should have atleast 10 characters.'
     })
 
     email = forms.EmailField(max_length=200, error_messages={
-        'required': 'Please provide a subject.',
+        'required': 'Please provide your email.',
         'max_length': 'Email should not exceed 500 characters.',
         'invalid': 'Please enter a valid email'
     })
